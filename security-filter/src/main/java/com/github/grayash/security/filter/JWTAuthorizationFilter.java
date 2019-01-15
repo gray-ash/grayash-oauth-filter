@@ -46,7 +46,7 @@ public class JWTAuthorizationFilter  extends UsernamePasswordAuthenticationFilte
         	if(body==null || body.getString("ROLE")==null || !body.getString("ROLE").equals("CUSTOMER")) {
             	throw new Exception();
             }else {
-            	SecurityContextHolder.getContext().setAuthentication(new UsernamePasswordAuthenticationToken(body.getString("CSID"), null, getAuthority()));
+            	SecurityContextHolder.getContext().setAuthentication(new UsernamePasswordAuthenticationToken(body.getString("CSID"), header, getAuthority()));
             }
 		} catch (Exception e) {
 			if(Log.isErrorEnabled())
@@ -59,6 +59,8 @@ public class JWTAuthorizationFilter  extends UsernamePasswordAuthenticationFilte
 	
 	private JSONObject getAuthentication(HttpServletRequest request)  {
         String token = request.getHeader(HEADER_STRING);
+        if(Log.isDebugEnabled())
+        	Log.debug("Token inside JWTAuthorizationFilter::"+token);
         if (token != null) {
         	token = token.replace(TOKEN_PREFIX, "");
         	String[] split_string = token.split("\\.");
@@ -71,6 +73,8 @@ public class JWTAuthorizationFilter  extends UsernamePasswordAuthenticationFilte
             JSONObject json=null;
             try {
             	json = new JSONObject(body);
+            	if(Log.isDebugEnabled())
+                	Log.debug("Token body::"+json);
             	
 			} catch (Exception e) {
 				return null;
