@@ -23,7 +23,7 @@ public class WebSecurityConfig extends WebSecurityConfigurerAdapter {
 	protected void configure(HttpSecurity http) throws Exception {
 		http.authorizeRequests()
 				.antMatchers("/v2/api-docs", "/configuration/ui", "/swagger-resources", "/configuration/security",
-						"/swagger-ui.html", "/webjars/**", "/app/otp/**", "/manageuser/register", "/manageuser/login")
+						"/swagger-ui.html", "/webjars/**", "/app/**", "/manageuser/register", "/manageuser/login")
 				.permitAll().anyRequest().authenticated().and()
 				.addFilterAfter(new JWTAuthorizationFilter(), BasicAuthenticationFilter.class).httpBasic()
 				.authenticationEntryPoint(enrtyPoint());
