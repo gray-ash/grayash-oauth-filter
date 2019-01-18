@@ -29,3 +29,7 @@ security-filter/.settings/org.eclipse.jdt.core.prefs
 security-filter/.settings/org.eclipse.core.resources.prefs
 security-filter/.project
 security-filter/.classpath
+*.jar
+*.pom
+*.dumpstream
+security-filter/target/nexus-staging/deferred/com/github/gray-ash/security-filter/1.0.10-SNAPSHOT/maven-metadata-nexus.xml
