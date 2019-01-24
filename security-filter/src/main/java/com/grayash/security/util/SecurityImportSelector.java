@@ -22,9 +22,9 @@ public class SecurityImportSelector implements ImportSelector {
 				.fromMap(importingClassMetadata.getAnnotationAttributes(EnableGrayashSecurity.class.getName(), false));
 		boolean enable = attributes.getBoolean("enable");
 		if(enable)
-			return new String[] { "com.github.grayash.security.config.WebSecurityConfig" };
+			return new String[] { "com.grayash.security.config.WebSecurityConfig" };
 		else
-			return new String[] { "com.github.grayash.security.config.AllowWebSecurityConfig" };
+			return new String[] { "com.grayash.security.config.AllowWebSecurityConfig" };
 	}
 
 	
