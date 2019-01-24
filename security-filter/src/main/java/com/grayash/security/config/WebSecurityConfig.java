@@ -1,4 +1,4 @@
-package com.github.grayash.security.config;
+package com.grayash.security.config;
 
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
@@ -7,8 +7,8 @@ import org.springframework.security.config.annotation.web.configuration.EnableWe
 import org.springframework.security.config.annotation.web.configuration.WebSecurityConfigurerAdapter;
 import org.springframework.security.web.authentication.www.BasicAuthenticationFilter;
 
-import com.github.grayash.security.filter.JWTAuthorizationFilter;
-import com.github.grayash.security.filter.OauthEntryPoint;
+import com.grayash.security.filter.JWTAuthorizationFilter;
+import com.grayash.security.filter.OauthEntryPoint;
 
 @Configuration
 @EnableWebSecurity

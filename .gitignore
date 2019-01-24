@@ -33,3 +33,7 @@ security-filter/.classpath
 *.pom
 *.dumpstream
 security-filter/target/nexus-staging/deferred/com/github/gray-ash/security-filter/1.0.10-SNAPSHOT/maven-metadata-nexus.xml
+*.class
+security-filter/target/classes/META-INF/MANIFEST.MF
+security-filter/target/classes/META-INF/maven/com.github.gray-ash/security-filter/pom.properties
+security-filter/target/nexus-staging/deferred/com/github/gray-ash/security-filter/1.0.11-SNAPSHOT/maven-metadata-nexus.xml

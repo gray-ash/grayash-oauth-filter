@@ -1,4 +1,4 @@
-package com.github.grayash.security.filter.constant;
+package com.grayash.security.filter.constant;
 
 public interface SecurityConstants {
 

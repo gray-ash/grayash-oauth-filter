@@ -1,4 +1,4 @@
-package com.github.grayash.security;
+package com.grayash.security;
 
 import java.lang.annotation.Documented;
 import java.lang.annotation.ElementType;
@@ -8,7 +8,7 @@ import java.lang.annotation.Target;
 
 import org.springframework.context.annotation.Import;
 
-import com.github.grayash.security.util.SecurityImportSelector;
+import com.grayash.security.util.SecurityImportSelector;
 
 
 @Target(ElementType.TYPE)

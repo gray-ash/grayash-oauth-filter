@@ -1,4 +1,4 @@
-package com.github.grayash.security.filter;
+package com.grayash.security.filter;
 
 import java.io.IOException;
 import java.util.Collections;
@@ -19,7 +19,7 @@ import org.springframework.security.core.authority.SimpleGrantedAuthority;
 import org.springframework.security.core.context.SecurityContextHolder;
 import org.springframework.security.web.authentication.UsernamePasswordAuthenticationFilter;
 
-import com.github.grayash.security.filter.constant.SecurityConstants;
+import com.grayash.security.filter.constant.SecurityConstants;
 
 
 public class JWTAuthorizationFilter  extends UsernamePasswordAuthenticationFilter  implements SecurityConstants{
